@@ -30,6 +30,6 @@ def sets():
 		return render_template("sets.html", sets2=sets2)
 
 
-if _name_ == '__main__':
+if __name__ == '__main__':
 	port=os.environ["PORT"]
 	app.run('0.0.0.0',int(port),debug=True)
