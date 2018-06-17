@@ -4,7 +4,7 @@ import json
 import os
 app = Flask(__name__)
 
-@app.route('/nombrecarta',methods=["get","post"])
+@app.route('/',methods=["get","post"])
 def nombrecarta():
 	carta=request.form.get("carta")
 	r=requests.get('https://api.magicthegathering.io/v1/cards?name='+str(carta))
