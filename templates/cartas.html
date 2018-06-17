@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block cartas %}
+<table  WIDTH="650">
+{% for i in cartas2 %}
+    <tr bgcolor= "#eeeeee">
+      <td width="500">
+      {{i["name"]}}</br>
+      coste: {{i["manaCost"]}}</br>
+      Expansión: {{i["setName"]}}</br>
+      texto: {{i["text"]}}</br>
+    </td>
+      {% if "http" in i["imageUrl"] %}
+        <td><img src="{{i["imageUrl"]}}"/></td>
+      {% else %}
+        <td><img src="../static/img/back.jpg"/></td>
+      {% endif %}
+  </tr>
+{% endfor -%}
+</table>
+{% endblock %}
