@@ -1,16 +1,10 @@
 {% extends "base.html" %}
 {% block sets %}
-{{cont=0}}
 <table align="left">
 <tr>
+{{cont=0}}
 {% for i in sets2["cards"] %}
-  {% if cont is 4 %}
-    <br/>
-    {{cont=0}}
-  {% else %}
     <td><img src="{{i["imageUrl"]}}"/></td>
-    {% cont=cont+1 %}
-  {% endif %}
 {% endfor %}
 </tr>
 </table>
