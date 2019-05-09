@@ -14,12 +14,8 @@
   <div id="form">
     <h2>Abre un sobre!</h2>
             <form  method="post" action="/sets">
-		    <select name="expansion">
-		    {% for i in lista %}
-                    	{% "<option value="{{loop.index}}">"{{ i }}" </option>" %}
-		    {% endfor %}
-	            </select>
-                    <input name="submit1" type="submit" id="submit1" value="Buscar" />
+              <input name="carta" type="text" id="textfield1" />
+              <input name="submit1" type="submit" id="submit1" value="Buscar" />
             </form>
   </div>
 <div id="container">
