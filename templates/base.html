@@ -3,36 +3,27 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link href="/static/css/style.css" rel="stylesheet" type="text/css" />
 <link rel="shortcut icon" href="/static/img/favicon.ico" />
-</head>
 <body>
-  <h3>Búsqueda de cartas</h3>
-          <form  method="post" action="/">
-              <div>
-                  <input name="carta" type="text" id="textfield1" />
-                  <input name="submit1" type="submit" id="submit1" value="Buscar" />
-              </div>
-          </form>
-  <h3>Abre un sobre!</h3>
-          <form  method="post" action="/sets">
-              <div>
-                  <input name="set" type="text" id="textfield1" />
-                  <input name="submit1" type="submit" id="submit1" value="Buscar" />
-              </div>
-          </form>
-<div id="header"></div>
+  <div id="form">
+    <h2>Búsqueda de cartas</h2>
+            <form  method="post" action="/">
+                    <input name="carta" type="text" id="textfield1" />
+                    <input name="submit1" type="submit" id="submit1" value="Buscar" />
+            </form>
+  </div>
+  <div id="form">
+    <h2>Abre un sobre!</h2>
+            <form  method="post" action="/sets">
+		    <select name="expansion">
+		    {% for i in lista %}
+                    	{% "<option value="{{loop.index}}">"{{ i }}" </option>" %}
+		    {% endfor %}
+	            </select>
+                    <input name="submit1" type="submit" id="submit1" value="Buscar" />
+            </form>
+  </div>
 <div id="container">
 <div id="sobre">
-<div id="menu">
-<ul>
-<li><a href="">home</a></li>
-<li><a href="">about
-me</a></li>
-<li><a href="">members</a></li>
-<li><a href="">services</a></li>
-<li><a href="">links</a></li>
-<li><a href="">contact</a></li>
-</ul>
-</div>
 <div id="main"><br />
 <div id="content">
   {% block cartas %}{% endblock %}
