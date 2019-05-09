@@ -3,7 +3,9 @@
 <table align="left">
 <tr>
 {% for i in sets["cards"] %}
+  {% if i["setName"] == opcion %}
     <td><img src="{{i["releaseDate"]}}"/></td>
+  {% endif %}
 {% endfor %}
 </tr>
 </table>
