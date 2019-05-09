@@ -2,7 +2,7 @@
 {% block sets %}
 <table align="left">
 <tr>
-{% for i in sets["cards"] %}
+{% for i in sets %}
   {% if i["setName"] == opcion %}
     <td><img src="{{i["imageUrl"]}}"/></td>
   {% endif %}
