@@ -32,7 +32,7 @@ def sets():
 @app.route('/allcards',methods=["get","post"])
 def allcards():
 	opcion=request.form.get("allcards")
-	r = requests.get("https://api.magicthegathering.io/v1/cards?page=1&pageSize=999")
+	r = requests.get("https://api.magicthegathering.io/v1/cards?setName="+opcion)
 	if r.status_code == 200:
 		doc = r.text
 		sets = json.loads(doc)

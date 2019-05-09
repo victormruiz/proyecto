@@ -3,9 +3,7 @@
 <table align="left">
 <tr>
 {% for i in sets %}
-  {% if i["setName"] == opcion %}
-    <td><img src="{{i["imageUrl"]}}"/></td>
-  {% endif %}
+  <td><img src="{{i["imageUrl"]}}"/></td>
 {% endfor %}
 </tr>
 </table>
