@@ -2,8 +2,16 @@
 {% block sets %}
 <table align="left">
 <tr>
+{{cont=0}}
 {% for i in sets2["cards"] %}
+  {% if cont != 4 %}
     <td><img src="{{i["imageUrl"]}}"/></td>
+    {{cont=cont+1}}
+  {% else %}
+    <br/>
+    {{cont=0}}
+  {% endif %}
+
 {% endfor %}
 </tr>
 </table>
