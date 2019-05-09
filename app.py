@@ -29,6 +29,14 @@ def sets():
 		sets2 =json.loads(doc2)
 		return render_template("sets.html", sets2=sets2)
 
+@app.route('/allcards',methods=["get","post"])
+def allcards():
+	set=request.form.get("allcards")
+	r = requests.get("https://api.magicthegathering.io/v1/sets?name="+str(set))
+	if r.status_code == 200:
+		doc = r.text
+		sets = json.loads(doc)
+		return render_template("allcards.html", sets=sets)
 
 if __name__ == '__main__':
 	port=os.environ["PORT"]

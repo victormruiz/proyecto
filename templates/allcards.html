@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block sets %}
+<table align="left">
+<tr>
+{% for i in sets2["cards"] %}
+    <td><img src="{{i["imageUrl"]}}"/></td>
+{% endfor %}
+</tr>
+</table>
+{% endblock %}
