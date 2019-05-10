@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/',methods=["get","post"])
 def nombrecarta():
 	carta=request.form.get("carta")
-	r=requests.get('https://api.magicthegathering.io/v1/cards?name='+str(carta))
+	r=requests.get('https://api.magicthegathering.io/v1/cards?name='+str(carta)+'&language=spanish')
 	if r.status_code==200:
 		doc = r.text
 		cartas = json.loads(doc)
