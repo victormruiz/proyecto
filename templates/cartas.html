@@ -16,7 +16,9 @@
       {% endif %}
       {% for x in i["foreignNames"] %}
         {% if x["language"]=="Spanish" %}
-        <td>traduccion: {{x["text"]}}</td>
+          {% if x["text"]!="None" %}
+            <td>traduccion: {{x["text"]}}</td>
+          {% endif %}
         {% endif %}
       {% endfor %}
   </tr>
