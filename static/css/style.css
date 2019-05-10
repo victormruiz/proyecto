@@ -82,10 +82,7 @@ tr,td {
 }
 /********************** Main ***************************/
 #main {
-	background-image:url(images/main_bg.gif);
-	background-repeat: repeat-y;
 	display:block;
-	width:768px;
 	height:auto;
 }
 #content {
