@@ -27,13 +27,13 @@
             </form>
   </div>
 <div id="container">
+  {% block cartas %}{% endblock %}
 <div id="sobre">
 <div id="main"><br />
 <div id="content">
-  {% block cartas %}{% endblock %}
-  {% block sets %}{% endblock %}
   {% block allcards %}{% endblock %}
 <div id="left">
+    {% block sets %}{% endblock %}
 <br />
 </div>
 <div id="right">
