@@ -2,16 +2,18 @@
 {% block sets %}
 {% set cont = 0 %}
 <table align="left">
-<tr>
 {% for i in sets2["cards"] %}
+    {% if cont == 0 %}
+      <tr>
+    {% endif %}
     {% if cont != 3 %}
       <td><img src="{{i["imageUrl"]}}"/></td>
       {% set cont = cont+1 %}
-    {% else %}
+    {% if cont == 3 %}
+      </tr>
       <tr></tr>
-      {% set cont = 0 %}
+      {% set cont = 0 %}      
     {% endif %}
   {% endfor %}
-</tr>
 </table>
 {% endblock %}
