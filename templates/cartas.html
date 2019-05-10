@@ -14,7 +14,11 @@
       {% else %}
         <td><img src="../static/img/back.jpg"/></td>
       {% endif %}
-    <td>traduccion: {{i["language"]["spanish"]}}</td>
+      {% for i in i["cards"]["foreignNames"] %}
+        {% if i["language"]=="spanish" %}
+        <td>traduccion: {{i["text"]}}</td>
+        {% endif %}
+      {% endfor %}
   </tr>
 {% endfor -%}
 </table>
