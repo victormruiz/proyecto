@@ -14,7 +14,7 @@ body {
 	margin: 0px auto;
 	text-align: left;
 	float: center;
-	width: 3000px;
+	width: 1500px;
 }
 a {
 	color: #000000;
@@ -84,19 +84,19 @@ tr,td {
 #main {
 	display:block;
 	height:auto;
-	width: 3000px;
+	width: 1500px;
 }
 #content {
 	background-image:url(images/content_bg.gif);
 	background-repeat: repeat-y;
-	width:3000px;
+	width:1200px;
 	float: left;
 }
 
 #sobre {
 	display:block;
 	height:auto;
-	width: 3000px;
+	width: 1500px;
 /********************** Left - Text ***************************/
 #left {
 	float:left;
