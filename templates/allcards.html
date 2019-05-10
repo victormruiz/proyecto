@@ -3,7 +3,17 @@
 <table align="left">
 <tr>
 {% for i in sets["cards"] %}
-  <td><img src="{{i["imageUrl"]}}"/></td>
+  {% if cont == 0 %}
+    <tr>
+  {% endif %}
+  {% if cont != 3 %}
+    <td><img src="{{i["imageUrl"]}}"/></td>
+    {% set cont = cont+1 %}
+  {% endif %}
+  {% if cont == 3 %}
+    </tr>
+    {% set cont = 0 %}
+  {% endif %}
 {% endfor %}
 </tr>
 </table>
