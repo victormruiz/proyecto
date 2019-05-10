@@ -2,7 +2,7 @@
 {% block cartas %}
 <table  WIDTH="650">
 {% for i in cartas2 %}
-    <tr bgcolor= "">
+    <tr>
       <td width="500">
       {{i["name"]}}</br>
       coste: {{i["manaCost"]}}</br>
@@ -10,14 +10,14 @@
       texto: {{i["text"]}}</br>
     </td>
       {% if "http" in i["imageUrl"] %}
-        <td><img src="{{i["imageUrl"]}}"/></td>
+        <td bgcolor= ""><img src="{{i["imageUrl"]}}"/></td>
       {% else %}
-        <td><img src="../static/img/back.jpg"/></td>
+        <td bgcolor= ""><img src="../static/img/back.jpg"/></td>
       {% endif %}
       {% for x in i["foreignNames"] %}
         {% if x["language"]=="Spanish" %}
           {% if x["text"]!="None" %}
-            <td>traduccion: {{x["text"]}}</td>
+            <td width="500">traduccion: {{x["text"]}}</td>
           {% endif %}
         {% endif %}
       {% endfor %}
