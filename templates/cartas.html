@@ -10,9 +10,9 @@
       texto: {{i["text"]}}</br>
     </td>
       {% if "http" in i["imageUrl"] %}
-        <td bgcolor= ""><img src="{{i["imageUrl"]}}"/></td>
+        <td style="background-color:rgba(0, 0, 0, 0); align="left"><img src="{{i["imageUrl"]}}"/></td>
       {% else %}
-        <td bgcolor= ""><img src="../static/img/back.jpg"/></td>
+        <td style="background-color:rgba(0, 0, 0, 0); align="left"><img src="../static/img/back.jpg"/></td>
       {% endif %}
       {% for x in i["foreignNames"] %}
         {% if x["language"]=="Spanish" %}
