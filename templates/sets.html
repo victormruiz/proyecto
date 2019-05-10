@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block sets %}
 {% set cont = 0 %}
-<img src="{{i["imageUrl"]}}"/>
+<table align="left">
+{% for i in sets2["cards"] %}
+    <img src="{{i["imageUrl"]}}"/>
 {% endblock %}
