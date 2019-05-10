@@ -1,19 +1,5 @@
 {% extends "base.html" %}
 {% block sets %}
 {% set cont = 0 %}
-<table align="left">
-{% for i in sets2["cards"] %}
-    {% if cont != 3 and cont > 0 %}
-      <td><img src="{{i["imageUrl"]}}"/></td>
-      {% set cont = cont+1 %}
-    {% elif cont == 0 %}
-      <tr>
-      <td><img src="{{i["imageUrl"]}}"/></td>
-      {% set cont = cont+1 %}
-    {% elif cont == 3 %}
-      </tr>
-      {% set cont = 0 %}
-    {% endif %}
-  {% endfor %}
-</table>
+<img src="{{i["imageUrl"]}}"/>
 {% endblock %}
