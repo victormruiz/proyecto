@@ -93,6 +93,10 @@ tr,td {
 	float: left;
 }
 
+#sobre {
+	display:block;
+	height:auto;
+	width: 1500px;
 /********************** Left - Text ***************************/
 #left {
 	float:left;
