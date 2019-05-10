@@ -2,7 +2,6 @@
 {% block allcards %}
 {% set cont = 0 %}
 <table align="left">
-<tr>
 {% for i in sets["cards"] %}
   {% if cont == 0 %}
     <tr>
@@ -16,6 +15,5 @@
     {% set cont = 0 %}
   {% endif %}
 {% endfor %}
-</tr>
 </table>
 {% endblock %}
