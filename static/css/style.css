@@ -87,13 +87,13 @@ tr,td {
 	background-image:url(images/main_bg.gif);
 	background-repeat: repeat-y;
 	display:block;
-	width:768px;
+	width:850px;
 	height:auto;
 }
 #content {
 	background-image:url(images/content_bg.gif);
 	background-repeat: repeat-y;
-	width:768px;
+	width:850px;
 	float: left;
 }
 
