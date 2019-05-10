@@ -80,6 +80,7 @@ h3 {
 tr,td {
 	text-align:center
 	bgcolor: #FFFFFF;
+	border-radius: 15px;
 }
 /********************** Main ***************************/
 #main {
