@@ -9,10 +9,11 @@
     {% if cont != 3 %}
       <td><img src="{{i["imageUrl"]}}"/></td>
       {% set cont = cont+1 %}
+    {% endif %}
     {% if cont == 3 %}
       </tr>
       <tr></tr>
-      {% set cont = 0 %}      
+      {% set cont = 0 %}
     {% endif %}
   {% endfor %}
 </table>
