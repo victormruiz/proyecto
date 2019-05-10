@@ -78,8 +78,8 @@ h3 {
 	border-bottom: solid 1px #625d3b;
 }
 tr,td {
-	text-align:center
-	bgcolor: #FFFFFF;
+	text-align:center;
+	background-color: white;
 	border-radius: 15px;
 }
 /********************** Main ***************************/
