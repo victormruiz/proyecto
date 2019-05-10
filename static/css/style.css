@@ -92,6 +92,7 @@ tr,td {
 	background-image:url(images/content_bg.gif);
 	background-repeat: repeat-y;
 	width:768px;
+	align: left;
 }
 
 /********************** Left - Text ***************************/
