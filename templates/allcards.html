@@ -2,7 +2,7 @@
 {% block allcards %}
 <table align="left">
 <tr>
-{% for i in sets %}
+{% for i in sets["cards"] %}
   <td><img src="{{i["imageUrl"]}}"/></td>
 {% endfor %}
 </tr>
