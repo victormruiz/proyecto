@@ -15,11 +15,11 @@
         <td><img src="../static/img/back.jpg"/></td>
       {% endif %}
       {% for x in i["foreignNames"] %}
-        {% if x["language"]=="spanish" %}
+        {% if x["language"]=="Spanish" %}
         <td>traduccion: {{x["text"]}}</td>
         {% endif %}
       {% endfor %}
   </tr>
-{% endfor -%}
+{% endfor %}
 </table>
 {% endblock %}
