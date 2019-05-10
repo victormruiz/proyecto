@@ -5,12 +5,12 @@
 {% for i in sets2["cards"] %}
     {% if cont == 0 %}
       <tr>
-    {% endif %}
-    {% if cont != 3 %}
       <td><img src="{{i["imageUrl"]}}"/></td>
       {% set cont = cont+1 %}
-    {% endif %}
-    {% if cont == 3 %}
+    {% elif cont != 3 and cont > 0 %}
+      <td><img src="{{i["imageUrl"]}}"/></td>
+      {% set cont = cont+1 %}
+    {% elif cont == 3 %}
       </tr>
       {% set cont = 0 %}
     {% endif %}
