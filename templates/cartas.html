@@ -3,7 +3,7 @@
 <table  WIDTH="650">
 {% for i in cartas2 %}
     <tr>
-      <td width="500">
+      <td width="500" bgcolor= "#FFFFFF">
       {{i["name"]}}</br>
       coste: {{i["manaCost"]}}</br>
       Expansión: {{i["setName"]}}</br>
@@ -17,7 +17,7 @@
       {% for x in i["foreignNames"] %}
         {% if x["language"]=="Spanish" %}
           {% if x["text"]!="None" %}
-            <td width="500">traduccion: {{x["text"]}}</td>
+            <td width="500" bgcolor= "#FFFFFF">traduccion: {{x["text"]}}</td>
           {% endif %}
         {% endif %}
       {% endfor %}
