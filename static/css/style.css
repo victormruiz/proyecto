@@ -186,3 +186,8 @@ tr,td {
    text-align: left;
 	 border-radius: 15px;
 }
+
+.bfQuickMode .form-actions  .pull-right{
+	float:none;
+	text-align:center;
+}
