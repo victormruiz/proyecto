@@ -15,7 +15,7 @@
         <td style="background-color:rgba(0, 0, 0, 0); align="left"><img src="../static/img/back.jpg"/></td>
       {% endif %}
       {% for x in i["foreignNames"] %}
-        {% if len x == 0 %}
+        {% if x|length = 0 %}
           <td width="2000">Traducción no disponible</td>
         {% endif %}
         {% if x["language"]=="Spanish" %}
