@@ -5,4 +5,6 @@
 {% for i in sets2["cards"] %}
     <img src="{{i["imageUrl"]}}"/>
 {% endfor %}
+<form  method="post" action="/allcards">
+  <input name="prueba" type="submit" id="prueba" value="pagina siguiente" />
 {% endblock %}
