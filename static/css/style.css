@@ -99,8 +99,7 @@ tr,td {
 
 /********************** Left - Text ***************************/
 #left {
-	float:left;
-	width:850px;
+	float:center;
 }
 #left p{
 	padding: 5px 10px 10px 30px;
