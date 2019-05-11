@@ -40,6 +40,11 @@ def allcards():
 			sets = json.loads(doc)
 			return render_template("allcards.html", sets=sets, opcion=opcion)
 	else:
+		r = requests.get("https://api.magicthegathering.io/v1/cards?setName="+opcion+"&page="+pagina)
+		if r.status_code == 200:
+			doc = r.text
+			sets = json.loads(doc)
+			return render_template("allcards.html", sets=sets, opcion=opcion)
 		pagina=pagina+1
 
 if __name__ == '__main__':
