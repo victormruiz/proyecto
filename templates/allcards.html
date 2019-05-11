@@ -6,7 +6,9 @@
   <img src="{{i["imageUrl"]}}"/>
 {% endfor %}
 </table>
-<form action="1">
-    <input type="submit" value="Pagina siguiente" />
+<form action="/allcards" method="post" enctype="text/plain" name="miform">
+  <input type="checkbox" name="pagina" value= "1"checked>1
+  <input name="submit1" type="submit" id="submit1" value="pagina siguiente" />
+</form>
 </form>
 {% endblock %}
