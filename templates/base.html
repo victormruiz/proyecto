@@ -26,12 +26,14 @@
               <input name="submit1" type="submit" id="submit1" value="Buscar" />
             </form>
   </div>
+<div id="coleccion">
+  {% block allcards %}{% endblock %}
+</div>
 <div id="container">
   {% block sets %}{% endblock %}
 <div id="main"><br />
   {% block cartas %}{% endblock %}
 <div id="content">
-  {% block allcards %}{% endblock %}
 <div id="left">
 <br />
 </div>
