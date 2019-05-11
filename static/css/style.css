@@ -16,6 +16,9 @@ body {
 	float: center;
 	width: 780px;
 }
+#coleccion {
+	margin-right: 5px;
+}
 a {
 	color: #000000;
 	font-family: Arial, Helvetica, sans-serif, Verdana;
