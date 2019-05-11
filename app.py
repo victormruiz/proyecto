@@ -33,7 +33,7 @@ def sets():
 def allcards():
 	pagina=request.form.get("allcards")
 	opcion=request.form.get("allcards")
-	if pagina == "":
+	if pagina = "":
 		r = requests.get("https://api.magicthegathering.io/v1/cards?setName="+opcion)
 		if r.status_code == 200:
 			doc = r.text
