@@ -18,6 +18,8 @@
         {% if x["language"]=="Spanish" %}
           {% if x["text"] != None %}
               <td width="2000">traduccion: {{x["text"]}}</td>
+          {% else %}
+                <td width="2000">Traducción no disponible {{x["text"]}}</td>
           {% endif %}
         {% endif %}
       {% endfor %}
