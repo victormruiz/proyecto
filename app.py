@@ -31,7 +31,7 @@ def sets():
 
 @app.route('/allcards',methods=["get","post"])
 @app.route('/allcards/<pag>/<opcion>')
-def allcards(pag=0,opcion=""):
+def allcards(pag=1,opcion=""):
 	if opcion=="":
 		opcion=request.form.get("allcards")
 	payload= {"expansion":opcion,"page":pag}
