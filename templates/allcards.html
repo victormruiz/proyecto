@@ -5,7 +5,7 @@
 {% for i in sets["cards"] %}
   <img src="{{i["imageUrl"]}}"/>
   {% if i["expansion"] != opcion %}
-    {% break %}
+    <p>
   {% endif %}
 
 {% endfor %}
