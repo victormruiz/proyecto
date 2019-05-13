@@ -30,7 +30,7 @@ def sets():
 		return render_template("sets.html", sets2=sets2)
 
 @app.route('/allcards',methods=["get","post"])
-@app.route('/allcards/<pag>')
+@app.route('/allcards/<pag>/<opcion>')
 def allcards(pag=0):
 	opcion=request.form.get("allcards")
 	payload= {"expansion":opcion,"page":pag}
