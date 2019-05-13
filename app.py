@@ -30,9 +30,10 @@ def sets():
 		return render_template("sets.html", sets2=sets2)
 
 @app.route('/allcards',methods=["get","post"])
-@app.route('/allcards/<pag>')
+@app.route('/allcards/<pag>/<opcion>')
 def allcards(pag=1,opcion=""):
-	opcion=request.form.get("allcards")
+	if opcion == "":
+		opcion=request.form.get("allcards")
 	payload= {"setName":opcion,"page":pag,"pageSize":50}
 	r = requests.get("https://api.magicthegathering.io/v1/cards",params=payload)
 	if r.status_code == 200:

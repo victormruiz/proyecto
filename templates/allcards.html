@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block allcards %}
-{% set cont = 0 %}
+{% opcion=opcion %}
 <table align="left">
 {% for i in sets["cards"] %}
   <img src="{{i["imageUrl"]}}"/>
 {% endfor %}
 </table>
-<a class="boton" href="/allcards/{{pag}}">siguiente</a>
+<a class="boton" href="/allcards/{{pag}}/{{opcion}}">siguiente</a>
 {% endblock %}
