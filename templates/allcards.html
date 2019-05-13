@@ -4,6 +4,10 @@
 <table align="left">
 {% for i in sets["cards"] %}
   <img src="{{i["imageUrl"]}}"/>
+  {% if i["expansion"] != opcion %}
+    {% break %}
+  {% endif %}
+
 {% endfor %}
 </table>
 <a href="/allcards/{{pag}}/{{opcion}}">siguiente</a>
