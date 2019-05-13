@@ -6,5 +6,6 @@
   <img src="{{i["imageUrl"]}}"/>
 {% endfor %}
 </table>
-<a href="/allcards/{{pag+1}}">siguiente</a>
+<a href="/allcards/{% pag+1 %}">siguiente</a>
+<a href="/allcards/{% pag-1 %}">anterior</a>
 {% endblock %}
