@@ -33,7 +33,7 @@ def sets():
 @app.route('/allcards/<pag>/<opcion>')
 def allcards(pag=1,opcion=""):
 	opcion=request.form.get("allcards")
-	payload= {"setName":opcion,"page":pag}
+	payload= {"setName":opcion,"page":pag,"pageSize":50}
 	r = requests.get("https://api.magicthegathering.io/v1/cards",params=payload)
 	if r.status_code == 200:
 		doc = r.text
