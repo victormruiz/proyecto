@@ -38,7 +38,7 @@ def allcards(pag=0):
 	if r.status_code == 200:
 		doc = r.text
 		sets = json.loads(doc)
-		return render_template("allcards.html", sets=sets, pag=pag)
+		return render_template("allcards.html", sets=sets, pag=pag, opcion=opcion)
 
 
 if __name__ == '__main__':
