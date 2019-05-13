@@ -31,14 +31,15 @@ def sets():
 
 @app.route('/allcards',methods=["get","post"])
 @app.route('/allcards/<pag>/<opcion>')
-def allcards(pag=0):
-	opcion=request.form.get("allcards")
+def allcards(pag=0,opcion=""):
+	if opcion=="":
+		opcion=request.form.get("allcards")
 	payload= {"expansion":opcion,"page":pag}
 	r = requests.get("https://api.magicthegathering.io/v1/cards",params=payload)
 	if r.status_code == 200:
 		doc = r.text
 		sets = json.loads(doc)
-		return render_template("allcards.html", sets=sets, pag=pag, opcion=opcion)
+		return render_template("allcards.html", sets=sets, pag=int(pag)+1,opcion=opcion)
 
 
 if __name__ == '__main__':
