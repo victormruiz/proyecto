@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block allcards %}
-{% opcion=opcion %}
+{% set opcion=opcion %}
 <table align="left">
 {% for i in sets["cards"] %}
   <img src="{{i["imageUrl"]}}"/>
