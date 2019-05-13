@@ -20,14 +20,9 @@ body {
 	margin-right: 5px;
 }
 a {
-	text-decoration: none;
-	padding: 10px;
-	font-weight: 600;
-	font-size: 20px;
-	color: #ffffff;
-	background-color: #1883ba;
-	border-radius: 6px;
-	border: 2px solid #0016b0
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif, Verdana;
+	font-size: 12px;
 }
 /********************** Header ***************************/
 #header {
@@ -201,12 +196,13 @@ tr,td {
 }
 
 .boton{
-	 text-decoration: none;
-	 padding: 10px;
-	 font-weight: 600;
-	 font-size: 20px;
-	 color: #ffffff;
-	 background-color: #1883ba;
-	 border-radius: 6px;
-	 border: 2px solid #0016b0
+	text-decoration:none;
+	font-weight:600;
+	font-size:20px;
+	color:#ffffff;
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:40px;
+	padding-right:40px;
+	background-color:#005BBB;
  }
