@@ -205,5 +205,7 @@ a.boton{
 	padding-left:40px;
 	padding-right:40px;
 	background-color:#005BBB;
+	height:200px;
+	width:200px;
 	text-align:center;
  }
