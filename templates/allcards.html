@@ -7,8 +7,14 @@
 {% endfor %}
 </table>
 <br/>
-<div dlass="boton">
-  <a class="boton1" href="/allcards/{{ret}}/{{opcion}}">anterior</a>
-  <a class="boton2" href="/allcards/{{pag}}/{{opcion}}">siguiente</a>
-</div>
+{% if pag == 2 %}
+  <div dlass="boton">
+    <a class="boton2" href="/allcards/{{pag}}/{{opcion}}">siguiente</a>
+  </div>
+{% else %}
+  <div dlass="boton">
+    <a class="boton1" href="/allcards/{{ret}}/{{opcion}}">anterior</a>
+    <a class="boton2" href="/allcards/{{pag}}/{{opcion}}">siguiente</a>
+  </div>
+{% endif %}
 {% endblock %}
