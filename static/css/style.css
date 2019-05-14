@@ -1,11 +1,19 @@
 body {
+
+
+
+
 	background: url(../img/Black-Lotus.jpg) no-repeat center;
-	background-attachment: fixed;
-	color: #000000;
-	font-family: Arial, Helvetica, sans-serif, Verdana;
-	font-size: 12px;
-	margin: 0px;
-	padding: 0px;
+  background-attachment: fixed;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif, Verdana;
+  font-size: 12px;
+  position: relative;
+  /* top: -20px; */
+  left: 100px;
+  /* left: 50%; */
+  /* margin: 0px; */
+  /* padding: 0px; */
 }
 
 * {margin: 0px;padding: 0px;}
