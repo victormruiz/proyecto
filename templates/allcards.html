@@ -1,17 +1,18 @@
 {% extends "base.html" %}
 {% block allcards %}
 {% set opcion=opcion %}
+{% set bandera=pag %}
 <table align="left">
 {% for i in sets["cards"] %}
   <img src="{{i["imageUrl"]}}"/>
 {% endfor %}
 </table>
 <div dlass="boton">
-
-
-
+{% if {{ bandera }} == 1 %}
+  <a class="boton" href="/allcards/{{pag}}/{{opcion}}">siguiente</a>
+{% else %}
   <a class="boton" href="/allcards/{{ret}}/{{opcion}}">anterior</a>
   <a class="boton" href="/allcards/{{pag}}/{{opcion}}">siguiente</a>
-
+{% endif %}
 </div>
 {% endblock %}
