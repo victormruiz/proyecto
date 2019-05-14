@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 {% block allcards %}
-{% set opcion=opcion %}
+{% set bandera=0 %}
 <table align="left">
 {% for i in sets["cards"] %}
   <img src="{{i["imageUrl"]}}"/>
+  {% if i["imageUrl"] == "" %}
+    {% set bandera=1 %}
+  {% endif %}
 {% endfor %}
 </table>
 <br/>
@@ -11,6 +14,11 @@
   <div dlass="boton">
     <a class="boton2" href="/allcards/{{pag}}/{{opcion}}">siguiente</a>
   </div>
+{% if bandera == 1 %}
+  <div dlass="boton">
+    <a class="boton1" href="/allcards/{{ret}}/{{opcion}}">anterior</a>
+  </div>
+{% endif %}
 {% else %}
   <div dlass="boton">
     <a class="boton1" href="/allcards/{{ret}}/{{opcion}}">anterior</a>
