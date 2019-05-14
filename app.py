@@ -17,7 +17,8 @@ def nombrecarta():
 @app.route('/sets',methods=["get","post"])
 def sets():
 	set=request.form.get("set")
-	r = requests.get("https://api.magicthegathering.io/v1/sets?name="+str(set))
+	payload= {"Name":set}
+	r = requests.get("https://api.magicthegathering.io/v1/sets",params=payload)
 	if r.status_code == 200:
 		doc = r.text
 		sets = json.loads(doc)
