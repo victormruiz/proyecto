@@ -40,7 +40,7 @@ def allcards(pag=1,opcion=""):
 		doc = r.text
 		sets = json.loads(doc)
 		ret=pag
-		return render_template("allcards.html", sets=sets, pag=int(pag)+1,opcion=opcion, ret=ret)
+		return render_template("allcards.html", sets=sets, pag=int(pag)+1,opcion=opcion, ret=int(ret)-1)
 
 
 if __name__ == '__main__':
