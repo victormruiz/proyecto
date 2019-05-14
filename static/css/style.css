@@ -100,6 +100,8 @@ tr,td {
 	display:block;
 	width:850px;
 	height:auto;
+	position: relative;
+	left: -10%;
 }
 #content {
 	background-image:url(images/content_bg.gif);
