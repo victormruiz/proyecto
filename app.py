@@ -45,7 +45,7 @@
 		doc = r.text
 		sets = json.loads(doc)
 		ret=pag
-		return render_template("allcards.html", sets=sets, pag=int(pag)+1,opcion=opcion, ret=int(ret)-1)
+		return render_template("allcards.html", sets=sets, pag=int(pag)+1,opcion=opcion, ret=ret)
 
 	def get_request_token_oauth1():
 	oauth = OAuth1(os.environ["CONSUMER_KEY"],
