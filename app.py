@@ -84,7 +84,7 @@ session["access_token"]= access_token.decode("utf-8")
 session["access_token_secret"]= access_token_secret.decode("utf-8")
 return redirect('/enviartweet')
 
-@app.route('/enviartweet')
+@app.route('/enviartweet',methods=["get","post"])
 def vertweet():
 access_token=session["access_token"]
 access_token_secret=session["access_token_secret"]
