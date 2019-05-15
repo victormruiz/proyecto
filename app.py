@@ -76,13 +76,13 @@ def twitter():
 
 @app.route('/twitter_callback')
 def twitter_callback():
-    request_token=session["request_token"]
-    request_token_secret=session["request_token_secret"]
-    verifier  = request.args.get("oauth_verifier")
-    access_token,access_token_secret= get_access_token_oauth1(request_token,request_token_secret,verifier)
-    session["access_token"]= access_token.decode("utf-8")
-    session["access_token_secret"]= access_token_secret.decode("utf-8")
-    return redirect('/enviartweet')
+	request_token=session["request_token"]
+	request_token_secret=session["request_token_secret"]
+	verifier  = request.args.get("oauth_verifier")
+	access_token,access_token_secret= get_access_token_oauth1(request_token,request_token_secret,verifier)
+	session["access_token"]= access_token.decode("utf-8")
+	session["access_token_secret"]= access_token_secret.decode("utf-8")
+	return redirect('/enviartweet')
 
 @app.route('/enviartweet')
 def vertweet():
@@ -93,7 +93,7 @@ def vertweet():
                    resource_owner_key=access_token,
                    resource_owner_secret=access_token_secret)
     url = 'https://api.twitter.com/1.1/statuses/update.json'
-	payload={"status":"He abierto un sobre en http://magiccardsearch.herokuapp.com, pruebalo tu mismo!"}
+    payload={"status":"He abierto un sobre en http://magiccardsearch.herokuapp.com, pruebalo tu!"}
     r = requests.post(url,auth=oauth,params=payload)
     if r.status_code==200:
         return render_template("tweet.html",datos=r.json())
