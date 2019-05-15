@@ -92,9 +92,9 @@ def vertweet():
                    client_secret=os.environ["CONSUMER_SECRET"],
                    resource_owner_key=access_token,
                    resource_owner_secret=access_token_secret)
-    #url = 'https://api.twitter.com/1.1/statuses/update'
-    #r = requests.post(url=url,auth=oauth,data=data)
-	#data="He abierto un sobre en http://magiccardsearch.herokuapp.com"
+    url = 'https://api.twitter.com/1.1/statuses/update'
+    r = requests.post(url=url,auth=oauth,data=data)
+	data="He abierto un sobre en http://magiccardsearch.herokuapp.com"
     if r.status_code==200:
         return render_template("tweet.html",datos=r.json())
     else:
