@@ -47,26 +47,6 @@ def allcards(pag=1,opcion=""):
 		ret=pag
 		return render_template("allcards.html", sets=sets, pag=int(pag)+1,opcion=opcion, ret=int(ret)-1)
 
-def get_request_token_oauth1():
-    oauth = OAuth1(os.environ["CONSUMER_KEY"],
-                  client_secret=os.environ["CONSUMER_SECRET"])
-    r = requests.post(url=REQUEST_TOKEN_URL, auth=oauth)
-    credentials = parse_qs(r.content)
-    return credentials.get(b'oauth_token')[0],credentials.get(b'oauth_token_secret')[0]
-
-def get_access_token_oauth1(request_token,request_token_secret,verifier):
-    oauth = OAuth1(os.environ["CONSUMER_KEY"],
-                   client_secret=os.environ["CONSUMER_SECRET"],
-                   resource_owner_key=request_token,
-                   resource_owner_secret=request_token_secret,
-                   verifier=verifier,)
-
-
-    r = requests.post(url=ACCESS_TOKEN_URL, auth=oauth)
-    credentials = parse_qs(r.content)
-    return credentials.get(b'oauth_token')[0],credentials.get(b'oauth_token_secret')[0]
-
-
 
 if __name__ == '__main__':
 	port=os.environ["PORT"]
