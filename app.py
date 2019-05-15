@@ -66,23 +66,6 @@ def get_access_token_oauth1(request_token,request_token_secret,verifier):
     credentials = parse_qs(r.content)
     return credentials.get(b'oauth_token')[0],credentials.get(b'oauth_token_secret')[0]
 
-@app.route('/twitter')
-def twitter():
-    request_token,request_token_secret = get_request_token_oauth1()
-    authorize_url = AUTHENTICATE_URL + request_token.decode("utf-8")
-    session["request_token"]=request_token.decode("utf-8")
-    session["request_token_secret"]=request_token_secret.decode("utf-8")
-    return render_template("oauth1.html",authorize_url=authorize_url)
-
-@app.route('/twitter_callback')
-def twitter_callback():
-    request_token=session["request_token"]
-    request_token_secret=session["request_token_secret"]
-    verifier  = request.args.get("oauth_verifier")
-    access_token,access_token_secret= get_access_token_oauth1(request_token,request_token_secret,verifier)
-    session["access_token"]= access_token.decode("utf-8")
-    session["access_token_secret"]= access_token_secret.decode("utf-8")
-    return redirect('/enviartweet')
 
 
 if __name__ == '__main__':
