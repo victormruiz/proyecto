@@ -4,10 +4,10 @@
 {% for i in cartas2 %}
     <tr>
       <td width="2000">
-      {{ i["name"] }}</br>
-      coste: {{ i["manaCost"] }}</br>
-      Expansión: {{ i["setName"] }}</br>
-      texto: {{ i["text"] }}</br>
+      {{ i["name"] }}<br/>
+      coste: {{ i["manaCost"] }}<br/>
+      Expansión: {{ i["setName"] }}<br/>
+      texto: {{ i["text"] }}<br/>
     </td>
       {% if "http" in i["imageUrl"] %}
         <td align="center"><img src="{{i["imageUrl"]}}"/></td>
