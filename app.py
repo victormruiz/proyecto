@@ -84,21 +84,6 @@ def twitter_callback():
     session["access_token_secret"]= access_token_secret.decode("utf-8")
     return redirect('/enviartweet')
 
-@app.route('/enviartweet')
-def vertweet():
-    access_token=session["access_token"]
-    access_token_secret=session["access_token_secret"]
-    oauth = OAuth1(os.environ["CONSUMER_KEY"],
-                   client_secret=os.environ["CONSUMER_SECRET"],
-                   resource_owner_key=access_token,
-                   resource_owner_secret=access_token_secret)
-    url = 'https://api.twitter.com/1.1/statuses/update.json'
-	payload={"status":"He abierto un sobre en http://magiccardsearch.herokuapp.com, pruebalo tu mismo!"}
-    r = requests.post(url,auth=oauth,params=payload)
-    if r.status_code==200:
-        return render_template("tweet.html",datos=r.json())
-    else:
-        return redirect("/twitter")
 
 if __name__ == '__main__':
 	port=os.environ["PORT"]
