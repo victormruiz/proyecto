@@ -76,7 +76,7 @@ def twitter():
     session["request_token_secret"]=request_token_secret.decode("utf-8")
     return redirect(authorize_url)
 
-@app.route('/twitter_callback')
+@app.route('/callback')
 def twitter_callback():
 	request_token=session["request_token"]
 	request_token_secret=session["request_token_secret"]
